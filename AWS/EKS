@@ -1,0 +1,12 @@
+Standalone k8 means self managed k8 
+1.31 is the latest version 2025
+
+1. create cluster 
+2. add nodes 
+
+once eks established --- deploy your images here 
+
+git --- build your source code ---jar/war  ---- docker image built --- deploy to k8 (selfmangaedor eks or aks or googlek8engine)
+
+
+

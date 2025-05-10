@@ -1,0 +1,4 @@
+ELASTIC CONTAINER REGISTRY
+
+push your docker images here repository to maintain docker images 
+similar to jfrog ---- instead of pushing artifacts in jfrog 

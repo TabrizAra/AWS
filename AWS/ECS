@@ -1,0 +1,5 @@
+Elastic container service 
+once docker images built --- save to ecr --- deploy docker image to k8 or you can deploy to EKS or ECS 
+takes your images runs it as a 
+same as eks 
+namespace --- group class of containers 

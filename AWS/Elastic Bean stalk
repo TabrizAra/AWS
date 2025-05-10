@@ -1,0 +1,6 @@
+lambda and ebs are different 
+lambda can run max 15 maintain triggered function, small tasks cannot host entire web app in lambda
+EB serverlss architecture 
+ - handles entire application 
+ - serverless 
+ - deploys entire web application

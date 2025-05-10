@@ -1,0 +1,11 @@
+User namanged by IAM organisation users 
+application ---- deployed --- for this application u have users end users who are accessing these application
+Get temporary credentials for AWS services with Amazon Cognito. 
+You can grant resource access to signed-in users and anonymous guest users. 
+This feature comes at no additional cost.
+
+to maintain user pool of the application we use cognito 
+end user --- login is managed by cognito
+
+user pool --- login 
+identity pool --- login accesses db and 
