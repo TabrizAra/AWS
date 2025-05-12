@@ -1,0 +1,14 @@
+If I want to create a VPC, design subnet --- RT -- map all 
+
+now again in differn projects same task 
+
+dev env , prod , staging u neet to create 
+
+automated process to create architecture 
+
+---- creating resources with the help of code 
+---- templates - code: yaml 
+    template ready -- submit it to cloud formation service 
+
+
+    <!-- sample template -->

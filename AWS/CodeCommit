@@ -1,0 +1,62 @@
+AWS CodeCommit is a fully-managed source control service that makes it easy for companies to host secure and highly scalable private Git repositories. CodeCommit eliminates the need to operate your own source control system or worry about scaling its infrastructure.
+
+
+JAVA -- build --- maven --- maven life cyccle -- pom.xml 
+
+c --- build ---- make 
+
+jfrog artifactory -- docker images can be stored here --- and then deployed 
+
+<!-- CODE build  -->
+buildspec.yaml file
+version: 0.2
+
+run-as: Linux-user-name
+
+env:
+  shell: shell-tag
+  variables:
+    key: "value"
+    key: "value"
+  parameter-store:
+    key: "value"
+    key: "value"
+  exported-variables:
+    - variable
+    - variable
+  secrets-manager:
+    key: secret-id:json-key:version-stage:version-id
+  git-credential-helper: no | yes
+
+proxy:
+  upload-artifacts: no | yes
+  logs: no | yes
+
+batch:
+  fast-fail: false | true
+  # build-list:
+  # build-matrix:
+  # build-graph:
+  # build-fanout:
+        
+phases:
+  install:  
+  pre_build:
+  build:
+  post_build:
+  report-group-name-or-arn:
+artifacts:
+cache:
+  key: key
+  fallback-keys:
+    - fallback-key
+    - fallback-key
+  action: restore | save
+  paths:
+    - path
+    - path
+
+APP spec.yaml file should be written for 
+
+cost optimisation 
+for each every build cost 

@@ -1,0 +1,59 @@
+Map IP address to Domain name
+or domain name to another domain name 
+
+
+Java -- app running or not --- check with ip:port app upend running --- local way of testing 
+ip address cannot be given to outside world 
+Get a domain name like www.some.com
+
+purchase domain name ---- with the hep of ROUTE53 --- i will map to the ip to the domain 
+
+map domain nae to another domain namea
+
+Mutiple machines to suffice the load ---- Load balancer at top of the machines ---- load balancer mapped to all the instances
+same java application everywhere ---- load balancer will not have an IP address it will have a Alias name/Alias domain name 
+
+.....aws.com ---> alias load balancer domain name 
+
+www.some.com ----- map to backend server ---- map it to load balancer domain name/ alias name 
+
+A type record ---- ip to Domain name, First hit the domain name ---- route 53 sends back the ip A record hostname to ip
+the end user send HTTP request to ip server and Gets back the HTTP response 
+C name record ----- domain to domain 
+
+In R53 --- we need to create the Registered domain --- 
+Once got the domain name ---- go to hosted zone ---- get into the hosted zone ---  create record set ---
+here u can map domain name to IP address i.e; A type record 
+or I can map a domain name to another domain name c name -- specify the value ---  that's it
+Record set ---- 
+
+TTLtime to leave  should be less --- cache,
+TTL -- but not low as possible --- high load 
+TTL should be moderate where the record set shoul d be updated quite often 
+
+
+Canonical name 
+in value load balancer url given 
+
+
+ROUTING POLICY 
+----- Geolocation routing policy --- it will route the traffic to servers in such a way that the latency is lesss 
+-----Weighted routing policy – Use to route traffic to multiple resources in proportions that you specify. 
+You can use weighted routing to create records in a private hosted zone.
+-----Latency routing policy – Use when you have resources in multiple AWS Regions and you want to route traffic to the Region that provides the best latency. 
+You can use latency routing to create records in a private hosted zone.
+-----Failover routing policy – Use when you want to configure active-passive failover. 
+You can use failover routing to create records in a private hosted zone.
+
+
+
+
+# how to apply certificates on particular domain 
+# if you are deploying an application how do I map the application to domain name ? 
+
+
+Users in USA --- route 53 can reduce latency 
+distribute load also ---- by 
+
+
+
