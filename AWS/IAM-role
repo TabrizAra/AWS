@@ -65,3 +65,8 @@ SessionToken
 All valid for a short duration (usually 15 min to 12 hours).
 
 ✅ Ideal for automation and scripting with minimal long-term security risk.
+
+
+AWS A/c A ------- connect ------AWS ac B 
+---- IAM role can help with this 
+sts policy attach to A ---- cross a/c 

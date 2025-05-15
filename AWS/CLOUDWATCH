@@ -1,0 +1,29 @@
+Monitor resources and application
+
+METRIC
+--- performanceof a particular resource on different parameters 
+--- predefined metrics, metrics comes and sit here 
+--- no need to configure 
+
+In alarm above 90%
+OK in below 90% 
+Insufficient data no data 
+with the help of metrics we can configure ALARMS
+
+4 actions can be taken under configure actions 
+1. sms
+2. scale up the instance 
+3. restart the instance ec2 actions can be taken 
+4. create an incident using system manage action 
+
+create incidence --- informing someone to take care of
+
+cloud watch uses SNS to send notification 
+
+SNS
+1. Topic (whatsapp group) 
+2. Subscription (users within whatsapp group)
+
+Whoever will be subscribed to topic will get the notification 
+
+topic created and subsciber also created 
