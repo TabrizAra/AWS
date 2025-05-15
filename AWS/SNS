@@ -1,0 +1,60 @@
+APPLICATION TO APLLICATION 
+--- we can use SNS for this one AWS service to aanother AWS service 
+--- example: cloudwatch to lambda we are using sns to trigger the lambda function 
+--- it is not only an email but it can also send notification to other service 
+
+PUBLISHER publishes msg & SUBSCRIBER receives msg
+
+Metric --- Alarm --- SNS 
+Publisher for SNS topic here is cloudwatch 
+Subscribers for this here is users 
+
+SNS supports Lambda, SQS, HTTPS etc
+
+<!-- 2 types of PUB-SUB model -->
+1. Application to Application --- the subscribe supported are SNS supports to trigger a Lambda function, SQS, HTTPS etc endpoints HTTPS & HTTPS
+2. Application to person 
+
+    PUSH notifications means-- alert, pop up display a msg and disappear soon. 
+
+    3 types of Subscription 
+    1. Push notification
+    2. text messsage
+    3. email
+
+Publishing msg to SNS topic ---- who ever subscribe to Topic they will get the message may be appln or user 
+
+<!-- TYPE OF TOPIC  -->
+
+SNS is using other service to send message 
+
+PUB cloudwatch ---- SNS TOPIC ---- SUB user a,b, ..... 100a.
+--- as soon as the triggers it should send the msg to 100 people, 
+--- while creating a topic we create SQS --- QUE 
+--- one after the other it serves 
+--- it holds the messages in ques
+SQS
+1. Standard Que
+2. FIFO Que first in first out --- comes first served first 
+    pub -- msgs --- this msg to 100 people then only next msg to be delivered 
+    orderly messages will be served 
+1. FIFO (first-in, first-out)
+Strictly-preserved message ordering like OTP 
+Exactly-once message delivery
+Subscription protocols: SQS
+
+2. Standard
+Best-effort message ordering, no guaranteed order, 
+At-least once message delivery
+Subscription protocols: SQS, Lambda, Data Firehose, HTTP, SMS, email, mobile application endpoints
+
+
+for email and text msgs use standard 
+
+FIFO USE
+
+--- Application wants to dump some messages to QUE --- from here you want to send this data to some other appln
+if you want to reuse the messages then FIFO is best 
+FIFO doesn't support email or texts and all
+endpoint supported are only sqs 
+
