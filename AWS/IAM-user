@@ -1,0 +1,74 @@
+IDENTITY & ACCESS MANAGEMENT 
+1. Access management 
+2. Access reports -- reports can be generated here, when who what will be known, 
+number of users and all present in the account 
+
+1. Access Management -- 
+    User- organisation has AWS a/c; provision users; admin creates users; restrict the users; list out the services he wants access to and restrict to these users;
+    group - at group level we can attach the policies 
+
+    CONSOLE ACCESS -     UI page, through UI console he/she can login via console
+    PROGRAMMATIC ACCESS - login via CLI access only; commands should be known for CLI output will be in JSON format
+
+    1347 -- policies provided by aws only 
+    name@12345678 --- iam user 
+    name --- root
+    
+<!-- BASIC POLICY STRUCTURE -->
+SID  name to the policy 
+EFFECT allow or deny resource * 
+PRINCIPAL policy used for one particular user  
+ACTION what action u want to allow * 
+RESOURCE within service/there is a resource * 
+
+full access policy 
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": "ec2:*", service:all action allowed 
+            "Effect": "Allow",
+            "Resource": "*"   #this policy applies to all the instances under ec2 service 
+        },
+
+    ]
+
+}
+
+s3 list policy 
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": "s3:describe", service:all action allowed 
+            "Effect": "Allow",
+            "Resource": "*"   #this policy applies to all the instances under ec2 service 
+            "Principal": arn:aws:iam::109869386934:user/Arsh
+        },
+
+    ]
+
+}
+
+Arsh has access to only dummy bucket to read
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": "s3:describe", service:all action allowed 
+            "Effect": "Allow",
+            "Resource": "dummyBucket"   #this policy applies to all the instances under ec2 service 
+            "Principal": arn:aws:iam::109869386934:user/Arsh
+        },
+
+    ]
+
+}
+
+
+AWS POLICY GENERATOR IS ALSO THERE 
+
+always deny explicit override explicit allow 
+
+

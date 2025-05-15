@@ -1,0 +1,67 @@
+ROLE: 
+instance in ec2 ---- bucket in s3
+code --- copy files from instance & dumps to s3
+Each resource in AWS are independent of each other
+
+resorce to resource access is given by ROLE 
+who ---- assuming role --- ec2 is assuming this role ---- whom: assume role on s3 
+
+depending on them create policy 
+
+then only it can dump the data
+
+services --- don't have access -- resorces also no permission 
+
+
+roles can be used to give permission to user 
+--- arjun ec2 user for 3 hours (temporary access to aws services)
+--- we can use Assume role - temporary access to aws resources
+--- access key, secret key session token 
+--- arjun can login to account for 3 hours 
+--- type command and assume role created 
+
+select trusted entities 
+--- ec2 is the selected trusted entity who (common use case)
+
+on whom 
+--- permission 
+
+go to role create a role with ec2 access the s3 
+
+go to that role > trust relationship > remove under principal add user > give arn of the user 
+
+ aws sts assume-role --role-arn arn:aws:iam::109869386934:user/tabrizara --role-session-name s3-access-example --duration-seconds 30
+ run this command with root aws configure 
+
+allows you to temporarily take on the permissions of another IAM role, often in a different AWS account or within the same account.
+
+It’s like saying:For this session, I want to act as this other role that has the necessary permissions to perform a specific task.
+
+1. use 
+🔐 1. Cross-account access
+Suppose your GitLab CI/CD runs in Account A, but the infrastructure you're deploying is in Account B. You:
+
+Create a role in Account B, and
+
+Allow Account A to assume that role.
+
+✅ This avoids sharing long-term access keys and helps keep accounts isolated but accessible in a secure way.
+
+
+2. Privilege separation
+Your user or process may have minimal permissions, but assumes a higher-privilege role only when needed.
+
+🔐 Helps implement least-privilege access.
+
+3. Temporary security credentials
+When assuming a role, you receive:
+
+AccessKeyId
+
+SecretAccessKey
+
+SessionToken
+
+All valid for a short duration (usually 15 min to 12 hours).
+
+✅ Ideal for automation and scripting with minimal long-term security risk.
