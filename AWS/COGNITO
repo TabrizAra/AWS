@@ -8,4 +8,4 @@ to maintain user pool of the application we use cognito
 end user --- login is managed by cognito
 
 user pool --- login 
-identity pool --- login accesses db and 
+identity pool --- login accesses db and backend servers

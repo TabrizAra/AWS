@@ -1,0 +1,27 @@
+you can't change the que type once created --- FIFO to standard or vice versa not possible 
+why Que is required? 
+    - Pub   messages consumed by this application sub
+    - there should be a system that system is called as que
+    - visibility timeout can be set 
+    one microservices to another microservice que message sent 
+    que name to be given to the developer
+
+    we were having microservice based architecture where one  
+
+Standard:
+At-least-once delivery, message ordering isn't preserved
+At-least once delivery
+Best-effort ordering
+
+
+FIFO 
+First-in-first-out delivery, message ordering is preserved
+First-in-first-out delivery
+Exactly-once processing
+
+
+Visibility timeout sets the length of time that a message received from a queue (by one consumer) will not be visible to the other message consumers.
+
+The message retention period is the amount of time that Amazon SQS retains a message that does not get deleted.
+
+If your consumers need additional time to process messages, you can delay each new message coming to the queue. 

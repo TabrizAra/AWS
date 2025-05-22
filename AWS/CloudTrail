@@ -1,0 +1,17 @@
+Cloudtrail, used to monitor user or API activity
+IAM users don't have cloutrail access 
+    trail can be deleted 
+
+Keeps the record for 3 months only -- cloutrail, 
+Event history for 1 year --- create a trail of your own 
+it stores the data in s3 bucket --- cloutrail is useing s3
+
+Create a trail based on 
+1. Management event - At the service level & resource level what activities are going on, create delete, change disk ec2, create sns, cloud watch etc
+2. Data event - Anywhere if your modifying the data wrt database, dynamodb etc data not the service, 
+3. Insights event - unusualactivity happens through a/c, where the API failing etc. 
+
+
+
+diff btw management event & data event -- AWS/Cloudtrail
+Restriction: 
